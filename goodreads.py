@@ -6,7 +6,8 @@ import sys, time
 import getopt
 
 # copy cookie from browser
-cookie = ''
+with open('goodreads.cookie', 'r') as f:
+    cookie = f.read().strip()
 
 def debugTag(tag, indent='\t'):
 	lines = str(tag).splitlines()
